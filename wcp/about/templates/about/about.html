@@ -1,0 +1,19 @@
+{% extends 'menu/base_menu.html' %}
+{% load static %}
+
+{% block title %}
+О Нас
+{% endblock %}
+
+{% block content %}
+
+<div><img src="{% static 'about/img/6.png' %}"></div>
+<div><h1>История появления</h1></div>
+<div><p>Текст</p></div>
+<div><p>Текст</p></div>
+<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4df3cddcb4387547ed943cca63c9459e8be25cd31376390d54a4a72e6fac356e&amp;source=constructor" width="800" height="600" frameborder="0"></iframe>
+{% for i in about %}
+    <div>{{ i.contacts }}</div>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'menu/css/menu.css' %}">
+
+{% block menu_nav %}
+<nav>
+    <div>
+        {% for i in categoriesm %}
+            <a href="{{ i.get_absolute_url }}">{{i.title}}</a>
+        {% endfor %}
+    </div>
+</nav>
+{% endblock %}
+
+{% block menu_menu %}
+
+{% endblock %}
+
+
+{% endblock%}

@@ -1,0 +1,35 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} {% endblock%}</title>
+</head>
+<body>
+<header>
+<ul>
+    <li><a href="{% url 'news' %}"> Новости </a></li>
+    <li><a href="{% url 'menu' %}"> Меню </a></li>
+    <li><a href="{% url 'main' %}"> Главная </a></li>
+    <li><a href="{% url 'about' %}"> О Нас </a></li>
+    <li><a href="{% url 'gallery' %}"> Галерея </a></li>
+</ul>
+</header>
+
+<div>
+{% block content %}
+
+{% endblock %}
+</div>
+<script src="{% static 'gallery/js/slider.js' %}"></script>
+<footer>
+    <p>Пользовательское соглашение</p>
+    <p>Белая ворона 2022</p>
+</footer>
+
+</body>
+</html>

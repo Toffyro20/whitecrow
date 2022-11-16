@@ -1,0 +1,29 @@
+{% extends 'gallery/base_gallery.html' %}
+{% load static %}
+{% block title %}
+Галерея
+{% endblock%}
+{% block slider %}
+
+<div class="conteiner">
+    <div class="slider">
+        <div class="slider-line">
+            {% for i in slider %}
+                <img src="{{i.media.url}}" alt="qwerty">
+            {% endfor %}
+        </div>
+    </div>
+    <button class="slider-back">назад</button>
+    <button class="slider-next">вперед</button>
+</div>
+{% endblock %}
+
+{% block gallery %}
+{% for i in gallery %}
+<div>
+    <div>
+        <img src="{{i.media.url}}" alt="qwerty">
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

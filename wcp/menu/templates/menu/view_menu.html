@@ -1,0 +1,22 @@
+{% extends 'menu/base_menu.html' %}
+{% load static %}
+{% block title %}
+{{menu_item.title}}
+{% endblock %}
+{% block menu_menu %}
+        <div>
+            <div>
+                <div>
+                    {% if menu_item.photo %}
+                        <img src="{{menu_item.photo.url}}" alt="">
+                    {% endif %}
+                    <div>
+                        <h2>{{menu_item.title}}</h2>
+                        <p>{{menu_item.categoryM.title}}</p>
+                        <p>{{menu_item.price}}</p>
+                        <p>{{menu_item.text_n}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

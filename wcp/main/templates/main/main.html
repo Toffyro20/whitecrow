@@ -1,0 +1,77 @@
+{% extends 'main/base_main.html' %}
+{% load static %}
+{% block title %}
+Главная
+{% endblock %}
+
+{% block main_image %}
+<div><img src="{% static 'main/img/4.png' %}"></div>
+{% endblock %}
+
+{% block main_brn %}
+<div>
+    <div><h1>Бронирование</h1></div>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.name_c}}<br>
+        {{form.phone_n}}<br>
+        {{form.date_b}}<br>
+        {{form.time_b}}<br>
+        {{form.table_b}}<br>
+        {{form.clients_n}}<br>
+        <span>{{errorv}}</span>
+        <span>{{errordb}}</span>
+        <button type="submit">Забронировать</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block main_n %}
+    <div>
+        {% for i in news_item %}
+        <div>
+            <div>
+                <div>
+                    <div><h2>{{i.title}}</h2></div>
+                    {% if i.photo %}
+                        <img src="{{i.photo.url}}" alt="">
+                    {% endif %}
+                    <div>
+                        <p>{{i.short_d}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div>
+                {{news_item.date_p|date:"Y-m-d H:i"}}
+            </div>
+                <div><a href="news">Новости</a></div>
+        </div>
+{% endblock %}
+    </div>
+
+{% block main_m %}
+<div>
+    <div><h1>Меню</h1></div>
+    <div><a href="menu/menu_category/1/">Кальяны</a></div>
+    <div><a href="menu/menu_category/2/">Еда</a></div>
+    <div><a href="menu/menu_category/3/">Напитки</a></div>
+    <div><a href="menu">Меню</a></div>
+
+</div>
+{% endblock %}
+
+{% block main_g %}
+<div>
+    <div><img src="{% static 'main/img/7.png' %}" ></div>
+    <div><p>Текст</p></div>
+    <div><a href="gallery">Галерея</a></div>
+</div>
+{% endblock %}
+
+{% block main_a %}
+<div>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4df3cddcb4387547ed943cca63c9459e8be25cd31376390d54a4a72e6fac356e&amp;source=constructor" width="800" height="600" frameborder="0"></iframe>
+    <div><a href="about">О Нас</a></div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'news/base_news.html' %}
+{% load static %}
+{% block title %}
+{{category.title}}
+{% endblock %}
+{% block news_news %}
+    {% for i in news %}
+        <div>
+            <div>
+                <div>
+                    <div><h2>{{i.title}}</h2></div>
+                    {% if i.photo %}
+                        <img src="{{i.photo.url}}" alt="">
+                    {% endif %}
+                    <div>
+                        <p>{{i.category.title}}</p>
+                        <p>{{i.short_d|linebreaks}}</p>
+                        <a href="{{ i.get_absolute_url }}">Далее...</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                {{i.date_p|date:"Y-m-d H:i"}}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
