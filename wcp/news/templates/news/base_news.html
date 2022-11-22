@@ -7,7 +7,7 @@
 <nav>
     <div>
         {% for i in categories %}
-            <a href="{{ i.get_absolute_url }}">{{i.title}}</a>
+            <a class="news_title" href="{{ i.get_absolute_url }}">{{i.title}}</a>
         {% endfor %}
     </div>
 </nav>

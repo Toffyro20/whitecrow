@@ -5,21 +5,21 @@
 {% endblock %}
 {% block news_news %}
     {% for i in news %}
-        <div>
+        <div class="news_background">
             <div>
                 <div>
-                    <div><h2>{{i.title}}</h2></div>
+                    <div><h2 class="news_title1">{{i.title}}</h2></div>
                     {% if i.photo %}
-                        <img src="{{i.photo.url}}" alt="">
+                        <img class="news_img" src="{{i.photo.url}}" alt="">
                     {% endif %}
-                    <div>
-                        <p>{{i.category.title}}</p>
-                        <p>{{i.short_d|linebreaks}}</p>
-                        <a href="{{ i.get_absolute_url }}">Далее...</a>
+                    <div class="news_title">
+                        <p class="news_title">{{i.category.title}}</p>
+                        <p class="news_title"> {{i.short_d|linebreaks}}</p>
+                        <a class="news_title" href="{{ i.get_absolute_url }}">Далее...</a>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="news_date">
                 {{i.date_p|date:"Y-m-d H:i"}}
             </div>
         </div>

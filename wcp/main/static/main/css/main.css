@@ -1,9 +1,184 @@
-body{
-background-image: url('https://i.gifer.com/DuXi.gif');
-background-size: cover;
+.main_image{
+    text-align: center;
+    -webkit-border-radius: 40px;
+}
+.img{
+    text-align: center;
+    -webkit-border-radius: 40px;
+     border-style: ridge;
+    border-color: black;
+    border-width: 15px;
+    width: 1360px;
+    height: 920px;
+}
+.main_news{
+    text-align: center;
+    background-image: url(../img/backgroundblock.jpg);
+    background-size: cover;
+    -webkit-border-radius: 40px;
+    border-color: black;
+    border-style: ridge;
+    border-width: 15px;
+    margin: 400px;
+    margin-bottom: 100px;
+}
 
+.main_menu{
+    text-align: center;
+    background-image: url(../img/backgroundblock.jpg);
+    -webkit-border-radius: 40px;
+    border-style: ridge;
+    border-color: black;
+    border-width: 15px;
+    text-align: center;
+    margin-left: 500px;
+    width: 1350px;
+    height: 350px;
 
-height: 100vh;
-padding: 0;
-margin: 0;
+}
+
+.menu_item{
+    float;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+                justify-content: space-between;
+     -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.main_gallery{
+    text-align: center;
+    background-image: url(../img/backgroundblock.jpg);
+    background-size: cover;
+    -webkit-border-radius: 40px;
+    margin: 350px;
+        border-style: ridge;
+    border-color: black;
+    border-width: 15px;
+
+}
+
+.main_gallery_item{
+    text-align: center;
+    color: white;
+}
+
+.main_about{
+    text-align: center;
+    margin-right: 1000px;
+    margin-bottom: 150px;
+    background-image: url(../img/backgroundblock.jpg);
+    -webkit-border-radius: 40px;
+    width: 950px;
+    height: 750px;
+    border-style: ridge;
+    border-color: black;
+    border-width: 15px;
+}
+
+.news_buttom{
+    text-decoration: none;
+    color: white;
+    margin-left: 1300px;
+    padding-bottom: 25px;
+
+}
+
+.news_buttom_m{
+    padding-bottom: 25px;
+    font-size: 200%;
+}
+
+.short_news{
+    color: white;
+   margin-right: 1000px;
+   padding-bottom: 25px;
+}
+
+.main_title{
+    color: white;
+    padding-top: 35px;
+}
+
+.gallery_buttom{
+    padding-bottom: 25px;
+}
+
+.gallery_buttom_m{
+    color: white;
+    text-decoration: none;
+    font-size: 200%;
+}
+
+.bron{
+    text-align: center;
+    background-color: black;
+    background-size: fixed;
+
+}
+
+.main_gallery_image{
+    -webkit-border-radius: 40px;
+    width: 1316px;
+    height: 823px;
+    margin-top: 50px;
+}
+
+.main_map{
+    margin-top: 75px;
+}
+
+.from{
+    -webkit-border-radius: 40px;
+}
+
+.item_1{
+    padding-left: 200px;
+    text-decoration: none;
+    color:white
+}
+
+.item_2{
+    text-align: center;
+    text-decoration: none;
+    color:white
+}
+
+.item_3{
+    padding-right: 200px;
+    text-decoration: none;
+    color:white
+}
+
+.main_m_m{
+    color: white;
+    font-size: 200%;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.img_m1{
+    padding-top: 15px;
+    padding-left: 200px;
+}
+
+.img_m2{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.img_m3{
+    padding-top: 15px;
+    padding-right: 200px;
+}
+
+.menu_font{
+    font-size: 200%;
+    color: white;
 }

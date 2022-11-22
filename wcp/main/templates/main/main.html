@@ -5,15 +5,69 @@
 {% endblock %}
 
 {% block main_image %}
-<div><img src="{% static 'main/img/4.png' %}"></div>
+<div class="box" id="box"></div>
+<div class="main_image"><img class="img" src="{% static 'main/img/4.png' %}"></div>
+{% endblock %}
+
+{% block main_n %}
+    <div>
+        {% for i in news_item %}
+        <div>
+            <div>
+                <div class="main_news">
+                    <div class="main_title"><h2>{{i.title}}</h2></div>
+                    {% if i.photo %}
+                        <img class="img" src="{{i.photo.url}}" alt="">
+                    {% endif %}
+                    <div class="short_news">
+                        <p>{{i.short_d}}</p>
+                    </div>
+                    <div class="news_buttom_m"><a class="news_buttom" href="news">Новости</a></div>
+                </div>
+                {% endfor %}
+            </div>
+            <div>
+                {{news_item.date_p|date:"Y-m-d H:i"}}
+            </div>
+        </div>
+{% endblock %}
+    </div>
+
+{% block main_m %}
+<div class="main_menu">
+    <div><h1 class="menu_font">Меню</h1></div>
+        <div class="menu_item">
+            <div><a class="item_1" href="menu/menu_category/1/">Кальяны</a><div><img class="img_m1" src="{% static 'main/img/11.png' %}"></div></div>
+            <div><a class="item_2" href="menu/menu_category/2/">Еда</a><div><img class="img_m2" src="{% static 'main/img/11.png' %}"></div></div>
+            <div><a class="item_3" href="menu/menu_category/3/">Напитки</a><div><img class="img_m3" src="{% static 'main/img/11.png' %}"></div></div>
+        </div>
+    <div><a class="main_m_m" href="menu">Меню</a></div>
+
+</div>
+{% endblock %}
+
+{% block main_g %}
+<div class="main_gallery">
+    <div><img class="main_gallery_image" src="{% static 'main/img/7.png' %}" ></div>
+    <div class="main_gallery_item"><p>
+        Кальян-бар "белая ворона это: - Самые вкусные кальяны - Лучшие чаи - VIP столы - PS4, Sega, Dandy, настолки, всё это каждый день с 18:00 до 02:00 Вход 18+</p></div>
+    <div class="gallery_buttom"><a class="gallery_buttom_m" href="gallery">Галерея</a></div>
+</div>
+{% endblock %}
+
+{% block main_a %}
+<div class="main_about">
+    <iframe class="main_map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A4df3cddcb4387547ed943cca63c9459e8be25cd31376390d54a4a72e6fac356e&amp;source=constructor" width="800" height="600" frameborder="0"></iframe>
+    <div><a href="about">О Нас</a></div>
+</div>
 {% endblock %}
 
 {% block main_brn %}
-<div>
+<div class="bron">
     <div><h1>Бронирование</h1></div>
-    <form method="POST">
+    <form class="bron_form" method="POST">
         {% csrf_token %}
-        {{form.name_c}}<br>
+        <div class="from">{{form.name_c}}</div><br>
         {{form.phone_n}}<br>
         {{form.date_b}}<br>
         {{form.time_b}}<br>
@@ -23,55 +77,5 @@
         <span>{{errordb}}</span>
         <button type="submit">Забронировать</button>
     </form>
-</div>
-{% endblock %}
-
-{% block main_n %}
-    <div>
-        {% for i in news_item %}
-        <div>
-            <div>
-                <div>
-                    <div><h2>{{i.title}}</h2></div>
-                    {% if i.photo %}
-                        <img src="{{i.photo.url}}" alt="">
-                    {% endif %}
-                    <div>
-                        <p>{{i.short_d}}</p>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            <div>
-                {{news_item.date_p|date:"Y-m-d H:i"}}
-            </div>
-                <div><a href="news">Новости</a></div>
-        </div>
-{% endblock %}
-    </div>
-
-{% block main_m %}
-<div>
-    <div><h1>Меню</h1></div>
-    <div><a href="menu/menu_category/1/">Кальяны</a></div>
-    <div><a href="menu/menu_category/2/">Еда</a></div>
-    <div><a href="menu/menu_category/3/">Напитки</a></div>
-    <div><a href="menu">Меню</a></div>
-
-</div>
-{% endblock %}
-
-{% block main_g %}
-<div>
-    <div><img src="{% static 'main/img/7.png' %}" ></div>
-    <div><p>Текст</p></div>
-    <div><a href="gallery">Галерея</a></div>
-</div>
-{% endblock %}
-
-{% block main_a %}
-<div>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4df3cddcb4387547ed943cca63c9459e8be25cd31376390d54a4a72e6fac356e&amp;source=constructor" width="800" height="600" frameborder="0"></iframe>
-    <div><a href="about">О Нас</a></div>
 </div>
 {% endblock %}

@@ -4,21 +4,21 @@
 {{news_item.title}}
 {% endblock %}
 {% block news_news %}
-        <div>
+        <div class="news_background">
             <div>
                 <div>
-                    <div><h2>{{news_item.title}}</h2></div>
+                    <div><h2 class="news_title1">{{news_item.title}}</h2></div>
                     {% if news_item.photo %}
-                        <img src="{{news_item.photo.url}}" alt="">
+                        <img class="news_img" src="{{news_item.photo.url}}" alt="">
                     {% endif %}
-                    <div>
-                        <p>{{news_item.category.title}}</p>
-                        <p>{{news_item.short_d|linebreaks}}</p>
-                        <p>{{news_item.text_n|linebreaks}}</p>
+                    <div class="news_title">
+                        <p class="news_title" >{{news_item.category.title}}</p>
+                        <p class="news_title" >{{news_item.short_d|linebreaks}}</p>
+                        <p class="news_title" >{{news_item.text_n|linebreaks}}</p>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="news_date">
                 {{news_item.date_p|date:"Y-m-d H:i"}}
             </div>
         </div>
