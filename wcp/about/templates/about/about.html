@@ -7,11 +7,17 @@
 
 {% block content %}
 
-<div><img src="{% static 'about/img/6.png' %}"></div>
-<div><h1>История появления</h1></div>
-<div><p>Текст</p></div>
-<div><p>Текст</p></div>
-<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4df3cddcb4387547ed943cca63c9459e8be25cd31376390d54a4a72e6fac356e&amp;source=constructor" width="800" height="600" frameborder="0"></iframe>
+<link rel="stylesheet" href="{% static 'about/css/about.css' %}">
+
+<div class="about_img" ><img class="about_img_img" src="{% static 'about/img/6.png' %}"></div>
+<div class="history_background"><h1 class="history">История появления</h1></div>
+<div><p class="history_text">Примерно лет 15 назад в России услышали о довольно странном празднике, который весьма популярен во многих странах мира. Дети в школах на уроках английского языка с радостью наряжались в костюмы, имеющие страшноватый вид и бурно радовались атмосфере таинственности и мистики. Между тем праздник всех святых Хэллоуин имеет под собой весьма серьезные корни. Считается, что в этот день 31 октября нечистая сила выходит пугать благочестивых обывателей. Для отпугивания ее на окна дома ставились пустые тыквы с вырезанными глазами и ртом и свечкой внутри, а для задабривания приносились дары. У некоторых народностей этот праздник существует уже более 2 тыс. лет. Сейчас этот праздник носит больше развлекательный характер и наиболее шумно отмечается в США и Канаде. Дети с удовольствием в этот день надевают страшные костюмы, вырезают тыквы и собирают дань в виде сладостей, а взрослые проводят яркие красочные шествия и карнавалы.</p></div>
+<div class="about_contacts">
+    <p class="about_contacts_text">Контакты</p><br>
+    <p>соц.сети</p><br><br>
+    <p></p>
+</div>
+<iframe class="about_map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A4df3cddcb4387547ed943cca63c9459e8be25cd31376390d54a4a72e6fac356e&amp;source=constructor" width="800" height="600" frameborder="0"></iframe>
 {% for i in about %}
     <div>{{ i.contacts }}</div>
 {% endfor %}

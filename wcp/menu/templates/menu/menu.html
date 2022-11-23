@@ -7,10 +7,10 @@
 {% block menu_menu %}
     {% for i in menu %}
         <div>
-            <div>
-                <div>
+            <div class="under_menu">
+                <div class="menu">
                     {% if i.photo %}
-                        <a href = "{{ i.get_absolute_url }}"><img src="{{i.photo.url}}" alt=""></a>
+                        <a href = "{{ i.get_absolute_url }}"><img class="menu_img" src="{{i.photo.url}}" alt=""></a>
                     {% endif %}
                     <div>
                         <h2>{{i.title}}</h2>

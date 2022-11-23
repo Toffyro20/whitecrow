@@ -9,20 +9,22 @@
     <div class="slider">
         <div class="slider-line">
             {% for i in slider %}
-                <img src="{{i.media.url}}" alt="qwerty">
+                <img class="slider_img" src="{{i.media.url}}" alt="qwerty">
             {% endfor %}
         </div>
     </div>
-    <button class="slider-back">назад</button>
-    <button class="slider-next">вперед</button>
+<div class="container_buttoms_slider">
+    <img class="slider-next" src="{% static 'gallery/img/slider_arrow.png' %}">
+    <img class="slider-back" src="{% static 'gallery/img/slider_arrow2.png' %}">
+</div>
 </div>
 {% endblock %}
 
 {% block gallery %}
 {% for i in gallery %}
-<div>
-    <div>
-        <img src="{{i.media.url}}" alt="qwerty">
+<div class="image">
+    <div class="gallery_img">
+        <img class="gallery_img_img" src="{{i.media.url}}" alt="qwerty">
     </div>
 </div>
 {% endfor %}

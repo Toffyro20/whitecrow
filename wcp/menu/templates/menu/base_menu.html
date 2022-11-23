@@ -8,7 +8,7 @@
 <nav>
     <div>
         {% for i in categoriesm %}
-            <a href="{{ i.get_absolute_url }}">{{i.title}}</a>
+            <a class="menu_categories" href="{{ i.get_absolute_url }}">{{i.title}}</a>
         {% endfor %}
     </div>
 </nav>

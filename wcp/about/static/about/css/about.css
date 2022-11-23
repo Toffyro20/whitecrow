@@ -1,0 +1,66 @@
+.about_img{
+    text-align: center;
+    -webkit-border-radius: 40px;
+}
+
+.about_img_img{
+    text-align: center;
+    -webkit-border-radius: 40px;
+    border-style: ridge;
+    border-color: black;
+    border-width: 15px;
+    width: 1360px;
+    height: 920px;
+}
+
+.history{
+    color: white;
+    font-size: 200%;
+    padding-top: 50px;
+    background-color: black;
+    width: 400px;
+    height: 100px;
+    -webkit-border-radius: 50px 50px 0 0;
+}
+
+.history_background{
+    text-align: center;
+    margin-left: 1000px;
+    margin-bottom: -30px;
+    -webkit-border-radius: 40px;
+}
+
+.history_text{
+    text-align: center;
+    color: white;
+    font-size: 150%;
+    padding-top: 50px;
+    margin-left: 250px;
+    margin-right: 250px;
+    padding-bottom: 50px;
+    background-color: black;
+    -webkit-border-radius: 40px;
+    border-style: ridge;
+    border-color: black;
+    border-width: 15px;
+}
+
+.about_map{
+    margin-left: 750px;
+    -webkit-border-radius: 40px;
+     border-style: ridge;
+    border-color: black;
+    border-width: 30px;
+}
+
+/*.about_contacts{
+    background-color: black;
+    color: white;
+    margin-left: 150px;
+}
+
+.about_contacts_text{
+    background-color: black;
+    float: left;
+    color: white;
+}*/

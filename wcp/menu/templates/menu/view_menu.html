@@ -6,11 +6,11 @@
 {% block menu_menu %}
         <div>
             <div>
-                <div>
+                <div class="view_menu">
                     {% if menu_item.photo %}
-                        <img src="{{menu_item.photo.url}}" alt="">
+                        <img class="menu_img_view" src="{{menu_item.photo.url}}" alt="">
                     {% endif %}
-                    <div>
+                    <div class="menu_text_view">
                         <h2>{{menu_item.title}}</h2>
                         <p>{{menu_item.categoryM.title}}</p>
                         <p>{{menu_item.price}}</p>
